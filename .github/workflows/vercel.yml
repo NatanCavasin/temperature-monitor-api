@@ -1,8 +1,11 @@
-
-name: preview
+name: vercel deploy
 on:
+  #pull_request:
+  #workflow_dispatch:
+  push:
+    branches: [ "main" ]
   pull_request:
-  workflow_dispatch:
+    branches: [ "main" ]
 
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
